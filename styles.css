@@ -39,73 +39,104 @@ body{
 
 .header-subtitle{
     color: var(--color-trhee);
+    text-align: center;
 }
 
+/* CALCULATOR */
 .main-container{
     display: flex;
     flex-direction: column;
+
+    gap: 15px;
+
     width: 70vw;
     max-width: 400px;
     height: 70vh;
-    max-height: 350px;
+    max-height: 500px;
+
     background-color: var(--color-trhee);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 10px var(--color-one);
 }
 
+/* RESULT SCREEN */
 .result-container{
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
+
     width: 100%;
-    height: 20%;
-    background-color: var(--color-four);
-    padding: 5px;
-    border-collapse: collapse;
-    border-radius: 7px;
+    height: 30%;
     padding: 15px;
+    background-color: var(--color-four);
+    border-radius: 7px;
     box-shadow: 0 0 7px var(--color-one);
 }
 
-.result{
-    font-size: 1.5em;
+#current-operation{
+    font-size: 1.3em;
     align-self: flex-end;
 }
 
-.divider{
+#last-operation{
+    align-self: flex-start;
+    color: grey;
+}
+
+.btn{
+    width: 25%;
+    height: 100%;
+
+    box-shadow: 0 0 7px var(--color-one);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 10px;
+    
+    background-color: transparent;
+    
+    font-size: 1em;
+    font-weight: 900;
+}
+
+/* CLEAR & DELETE */
+.options-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
     width: 100%;
-    height: 8%;
+    height: 20%;
+}
+
+.erase{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 7px var(--color-one);
+    background-color: var(--color-two);
+    color: var(--color-trhee);
 }
 
 .row-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 10px;
+    justify-content: space-between;
+
+    gap: 20px;
     width: 100%;
-    height: 18%;
-    border-collapse: collapse;
-    border-top: none;
-    border-bottom: none;
+    height: 12%;
 }
 
-.row-container:last-of-type{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.button-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 7px var(--color-one);
-    border-radius: 7px;
-    width: 20%;
+.number, .operation, .special{
+    width: 25%;
     height: 100%;
 }
 
@@ -113,18 +144,12 @@ body{
     background-color: var(--color-five);
 }
 
-.option{
+.special{
     background-color: var(--color-four);
-}
+} 
 
-button{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 1em;
-    font-weight: 900;
+button:hover{
+    opacity: 0.7;
 }
 
 footer{
