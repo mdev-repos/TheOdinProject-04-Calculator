@@ -1,0 +1,140 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color-one:rgb(33, 22, 82);
+    --color-two:rgb(25, 67, 255);
+    --color-trhee:rgb(215, 216, 243);
+    --color-four:rgb(171, 169, 173);
+    --color-five:rgb(236, 128, 65);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+    background-color: var(--color-two);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-title{
+    font-size: 2em;
+    color: var(--color-one);
+    text-shadow: 1px 1px 3px var(--color-trhee);
+}
+
+.header-subtitle{
+    color: var(--color-trhee);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    max-width: 400px;
+    height: 70vh;
+    max-height: 350px;
+    background-color: var(--color-trhee);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px var(--color-one);
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: var(--color-four);
+    padding: 5px;
+    border-collapse: collapse;
+    border-radius: 7px;
+    padding: 15px;
+    box-shadow: 0 0 7px var(--color-one);
+}
+
+.result{
+    font-size: 1.5em;
+    align-self: flex-end;
+}
+
+.divider{
+    width: 100%;
+    height: 8%;
+}
+
+.row-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+    width: 100%;
+    height: 18%;
+    border-collapse: collapse;
+    border-top: none;
+    border-bottom: none;
+}
+
+.row-container:last-of-type{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 7px var(--color-one);
+    border-radius: 7px;
+    width: 20%;
+    height: 100%;
+}
+
+.operation{
+    background-color: var(--color-five);
+}
+
+.option{
+    background-color: var(--color-four);
+}
+
+button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+}
+
+footer>p{
+    color: var(--color-trhee);
+    font-size: 1.3em;
+    text-shadow: var(--color-one);
+}
